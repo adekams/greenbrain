@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="icon" href="images/head-favicon.svg">
+    <title>greenbrain | Lecture handouts, past question papers, project topics and materials</title>
+</head>
+<body style="background: #88edcf;">
+    <div class="container">
+        
+        <div class="row d-flex vh-100 align-items-center justify-content-center">
+            <div class="col-xs-12 col-md-6">
+                <form action="" class="needs-validation bg-white my-2 my-md-5 pt-4 rounded-lg" novalidate>
+                    
+                    <h2 class="text-center mb-sm-5">Sign Up</h2>
+
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="first-name" class="col-form-label col-form-label-lg">First Name <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="text" class="form-control bg-light" id="firstname" placeholder="First Name" aria-describedby="First-name" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid first name.
+                            </div>
+                        </div>    
+                    </div>
+                    
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="last-name" class="col-form-label col-form-label-lg">Last Name <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="text" class="form-control bg-light" id="lastname" placeholder="Last Name" aria-describedby="Last-name" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid last name.
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="email" class="col-form-label col-form-label-lg">Email <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="email" class="form-control bg-light" id="email" placeholder="Email" aria-describedby="email" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid email.
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="password" class="col-form-label col-form-label-lg">Password <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="password" class="form-control bg-light" id="password" placeholder="Password" aria-describedby="Password" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid password.
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="school" class="col-form-label col-form-label-lg">First Name <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="text" class="form-control bg-light" id="school" placeholder="School" aria-describedby="school" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid school name.
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="form-group mx-3 mt-3">
+                        <div class="">
+                            <label for="department" class="col-form-label col-form-label-lg">First Name <span class="text-danger" aria-hidden="true">&ast;</span></label>                            
+                            <input type="text" class="form-control bg-light" id="department" placeholder="Department" aria-describedby="department" required>
+                            <div class="invalid-feedback">
+                                Please provide a valid departmental name.
+                            </div>
+                        </div>    
+                    </div>
+    
+                    <div class="border rounded-lg p-1 text-center mx-3 mb-4">
+                        <button type="submit" class="btn btn-lg btn-block btn-outline-info text-white" style="background: #88edcf;">Sign Up</button>
+                    </div>
+    
+                    <div class="pr-3 text-center mt-5 mx-0 py-4" style="background-color: #EEE;">
+                        <p>Already have an account? <a href="login.html" class="text-dark text-decoration-underline">Login here</a></p>
+                    </div>
+                    
+                    
+                </form>
+            </div>  
+        </div>
+    </div>
+   
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+</body>
+</html>
+
+
