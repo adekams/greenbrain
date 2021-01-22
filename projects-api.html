@@ -8,22 +8,30 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <title>Project topics and materials | greenbrain | Lecture handouts, past question papers, project topics and materials</title>
 </head>
-<body>
+<body  style="background: radial-gradient(circle, #dff0d8, #dbf6ee, #e5f9fd, #f5fbff, #ffffff);">
     <div class="container-fluid ">
-        <div class="row text-center mt-5">
-            <div class="col-xs-6 col-sm-4 my-3 pb-2 border-bottom">
+
+        <div class="row d-block py-4 px-md-5 mb-4">
+            <nav class="navbar navbar-light d-flex fixed-top bg-white border-bottom py-3 px-md-5">
+                <a class="navbar-brand font-weight-bold" href="Index.html" style="color: #5A6876;">Greenbrain</a>
+                <a class="btn btn-link text-dark border ml-auto" href="login.html">Login</a>
+            </nav>
+        </div>
+
+        <div class="row text-center mt-5 border-bottom">
+            <div class="col-xs-4 my-3 mx-auto px-0 px-sm-5">
                 <a class="text-decoration-none text-dark" href="lectures-api.html">Lecture Notes</a>
             </div>
-            <div class="col-xs-6 col-md-4 my-3 pb-2 border-bottom">
+            <div class="col-xs-4 mt-3 mx-auto px-0 px-sm-5">
                 <a class="text-decoration-none text-dark" href="questions-api.html">Past Questions</a>
             </div>
-            <div class="active col-xs-6 col-md-4 my-3 pb-2" style="border-bottom: 3px solid green">
+            <div class="active col-xs-4 mt-3 mx-auto px-0 px-sm-5" style="border-bottom: 3px solid green">
                 <a class="text-decoration-none text-success" href="projects-api.html">Project Materials</a>
             </div>
         </div>  
     </div>
 
-    <div class="container-fluid py-5 px-5" style="background: radial-gradient(circle, #dff0d8, #dbf6ee, #e5f9fd, #f5fbff, #ffffff);">
+    <div class="container-fluid py-5 px-5">
         <div class="row text-center px-3 mb-3">
             <div class="col-xs-3">
                 <button class="btn btn-outline-dark mb-4"><i data-feather='filter'></i> Filter By Course</button>
@@ -34,12 +42,25 @@
         </div> 
         
         <div class="row d-flex text-center" id="card-rows">
-          
+            <div class="m-auto" id="spinner">
+                <div class="spinner-grow text-success" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div class="spinner-grow text-success" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            
         </div>
       
     </div>
 
     <script>
+        const spinner = document.querySelector('#spinner')
+
         function getProjects() {
             let api = 'https://greenbrainbe.herokuapp.com/api/v1/projects'
             fetch(api)
@@ -71,6 +92,7 @@
                         
                     `;
                 })
+                spinner.style.display = "none";
                 document.getElementById('card-rows').innerHTML = course.join('')
             })
              
