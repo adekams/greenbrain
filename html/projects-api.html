@@ -96,7 +96,9 @@
                 document.getElementById('card-rows').innerHTML = course.join('')
             })
              
-            .catch((err) => console.log(err))
+            .catch((err) => {
+                console.log(err)
+                document.getElementById('card-rows').innerHTML = "Oops! No project found"            })
         }
 
         getProjects()
